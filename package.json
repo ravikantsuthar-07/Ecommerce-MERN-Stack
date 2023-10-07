@@ -6,7 +6,7 @@
     "type": "module",
     "scripts": {
         "start": "node server.js",
-        "client": "node start --prefix ./fontend",
+        "client": "npm start --prefix ./fontend",
         "dev": "concurrently  \"npm run start\" \"npm run client\""
     },
     "keywords": [],
