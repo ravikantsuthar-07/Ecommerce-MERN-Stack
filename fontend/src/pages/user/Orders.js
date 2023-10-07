@@ -38,7 +38,7 @@ const Orders = () => {
                         {order?.map((o, i) => {
                             return (
 
-                                <div className='border shadow'>
+                                <div className='border shadow' key={i}>
                                     <table className='table'>
                                         <thead>
                                             <tr>
@@ -60,8 +60,8 @@ const Orders = () => {
                                                 <td>{o?.products?.length}</td>
                                             </tr>
                                             <div className='cotainer'>
-                                                {o?.products.map(p => (
-                                                    <div className='row m-2 p-3 card flex-row'>
+                                                {o?.products.map((p, i) => (
+                                                    <div className='row m-2 p-3 card flex-row' key={i}>
                                                         <div className='col-md-4'>
                                                             <img
                                                                 src={`/api/v1/product/product-photo/${p._id}`}

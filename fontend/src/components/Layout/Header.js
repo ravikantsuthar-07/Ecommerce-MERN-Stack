@@ -39,8 +39,8 @@ export default function Header() {
                                 </Link>
                                 <ul className="dropdown-menu">
                                     <li><Link className="dropdown-item" to={`/categories`}>All Categories</Link></li>
-                                    {category?.map(c => (
-                                        <li key={c._id}><Link className="dropdown-item" to={`/category/${c.slug}`}>{c.name}</Link></li>
+                                    {category?.map((c, i) => (
+                                        <li key={i}><Link className="dropdown-item" to={`/category/${c.slug}`}>{c.name}</Link></li>
                                     ))}
                                 </ul>
 

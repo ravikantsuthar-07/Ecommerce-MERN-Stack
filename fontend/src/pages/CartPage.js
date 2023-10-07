@@ -22,7 +22,7 @@ const CartPage = () => {
     const totalPrice = () => {
         try {
             let total = 0;
-            cart.map(item => (total = total + item.price ))
+            cart.map((item) => (total = total + item.price ))
             return total.toLocaleString("en-IN", {
                 style: "currency",
                 currency: "INR"
@@ -103,8 +103,8 @@ const CartPage = () => {
                 <div className='row'>
                     <div className='col-md-8'>
                         {
-                            cart?.map(p => (
-                                <div className='row m-2 p-3 card flex-row'>
+                            cart?.map((p, i) => (
+                                <div className='row m-2 p-3 card flex-row' key={i}>
                                     <div className='col-md-4'>
                                         <img
                                             src={`/api/v1/product/product-photo/${p._id}`}

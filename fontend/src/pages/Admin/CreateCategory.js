@@ -127,10 +127,9 @@ const CreateCategory = () => {
                                         <th scope="col">Actions</th>
                                     </tr>
                                 </thead>
-                                <tbody>
                                     {
-                                        category?.map((c) => (
-                                            <>
+                                        category?.map((c, i) => (
+                                            <tbody key={i}>
                                                 <tr>
                                                     <td key={c._id} >{c.name}</td>
                                                     <td>
@@ -138,10 +137,9 @@ const CreateCategory = () => {
                                                         <button className="btn btn-danger ms-2" onClick={() => handleDelete(c._id)} >Delete</button>
                                                     </td>
                                                 </tr>
-                                            </>
+                                            </tbody>
                                         ))
-                                    }
-                                </tbody>
+                                    } 
                             </table>
                         </div>
                     </div>
