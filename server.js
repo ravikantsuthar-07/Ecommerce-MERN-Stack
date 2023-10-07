@@ -2,7 +2,7 @@ import express from "express";
 import dotenv from 'dotenv'
 import morgan from 'morgan'
 import path from 'path'
-import {filURLToPath} from 'url'
+import {fileURLToPath} from 'url'
 
 import connection from './Config/db.js';
 
@@ -18,7 +18,7 @@ dotenv.config();
 // database config
 connection()
 
-const __filename = filURLToPath(import.meta.url);
+const __filename = fileURLToPath(import.meta.url);
 const __dirname  = path.dirname(__filename)
 
 const app = express();
